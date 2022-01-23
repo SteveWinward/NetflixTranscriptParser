@@ -5,7 +5,7 @@ https://www.reddit.com/r/netflix/comments/4i1sp7/all_guide_how_to_download_subti
 
 The resulting xml file will look something like this,
 
-````
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" ttp:tickRate="10000000" ttp:timeBase="media" xmlns="http://www.w3.org/ns/ttml">
   <head>
@@ -27,13 +27,13 @@ The resulting xml file will look something like this,
       <p begin="120537084t" end="150150000t" region="region0" style="style0" tts:extent="80.00% 80.00%" tts:origin="10.00% 10.00%" xml:id="subtitle2"><span style="style2">wrote five </span><span style="style1">New York Times</span><br/><span style="style2">number one best sellers,</span></p>
       <p begin="150984167t" end="183516667t" region="region0" style="style0" tts:extent="80.00% 80.00%" tts:origin="10.00% 10.00%" xml:id="subtitle3"><span style="style2">and her TED Talk is one</span><br/><span style="style2">of the most watched in the world.</span></p>
 ...
-````
+```
 
 Then, build the NetflixTranscriptParser solution included in this repository.  Run the dotnet core exectubale as below,
 
-````
+```powershell
 .\NetflixTranscriptParser.exe "C:\Files\transcript.xml" "C:\Files\formattedOutput.txt"
-````
+```
 
 The result will yield a text file with the start timestamps of each closed caption text section.  Example below,
 
